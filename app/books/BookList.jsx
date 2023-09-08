@@ -1,4 +1,4 @@
-import { Herr_Von_Muellerhoff } from "next/font/google";
+import Link from "next/link";
 
 //I am fetching data outside the component to make it cleaner
 async function getBooks() {
@@ -24,14 +24,16 @@ export default async function BookList() {
     <>
       {books.map((book) => (
         <div key={book.id} className="card my-5">
-          <h3>{book.title}</h3>
-          {/* I use slice because I want to output only part of the body */}
-          <p>{book.body.slice(0, 200)}...</p>
-          {/* Besides the pill class,
+          <Link href={`/books/${book.id}`}>
+            <h3>{book.title}</h3>
+            {/* I use slice because I want to output only part of the body */}
+            <p>{book.body.slice(0, 200)}...</p>
+            {/* Besides the pill class,
           I want to add a class that corresponds to kid's age that corresponds 
           to the styling I'm applying to make them in different colors. */}
 
-          <div className={`pill ${book.age}`}>{book.age} age</div>
+            <div className={`pill ${book.age}`}>{book.age} age</div>
+          </Link>
         </div>
       ))}
       {/* If there no books, I wanna output the corresponding message */}
@@ -43,3 +45,5 @@ export default async function BookList() {
     </>
   );
 }
+// Wrapped everything in the Link component so that when we click on particular book,
+// we are redirected to the details page
