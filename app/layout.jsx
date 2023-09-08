@@ -14,8 +14,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={playfair.className}>{children}</body>
-      <Navbar />
+      <body className={playfair.className}>
+        {" "}
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
