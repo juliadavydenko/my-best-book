@@ -2,6 +2,9 @@ import Link from "next/link";
 
 //I am fetching data outside the component to make it cleaner
 async function getBooks() {
+  // imitating waiting time
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+
   const res = await fetch("http://localhost:4000/books", {
     next: {
       revalidate: 15,

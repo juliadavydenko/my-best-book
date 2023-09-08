@@ -22,6 +22,9 @@ export async function generateStaticParams() {
 // for all pages to be pre-rendered in advance
 
 async function getBook(id) {
+  // imitating waiting time to see Loading screen
+  // await new Promise((resolve) => setTimeout(resolve, 3000));
+
   const res = await fetch("http://localhost:4000/books/" + id, {
     next: {
       revalidate: 15,

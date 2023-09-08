@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import Loading from "../loading";
 import BookList from "./BookList";
 
 export default function Books() {
@@ -11,7 +13,9 @@ export default function Books() {
           </p>
         </div>
       </nav>
-      <BookList />
+      <Suspense fallback={<Loading />}>
+        <BookList />
+      </Suspense>
     </main>
   );
 }
