@@ -530,6 +530,10 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -539,6 +543,9 @@ video {
 }
 .justify-center {
   justify-content: center;
+}
+.text-center {
+  text-align: center;
 }
 .blur {
   --tw-blur: blur(8px);
@@ -742,7 +749,7 @@ body {
   line-height: 1rem;
   font-weight: 600;
 }
-  .pill.high {
+  .pill.mature {
   --tw-bg-opacity: 1;
   background-color: rgb(252 165 165 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -754,7 +761,7 @@ body {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
 }
-  .pill.low {
+  .pill.young {
   --tw-bg-opacity: 1;
   background-color: rgb(110 231 183 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;

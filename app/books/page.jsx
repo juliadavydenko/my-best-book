@@ -1,7 +1,17 @@
-export default function Home() {
+import BookList from "./BookList";
+
+export default function Books() {
   return (
     <main>
-      <h2>Books</h2>
+      <nav>
+        <div>
+          <h2>Books</h2>
+          <p>
+            <small>Available books</small>
+          </p>
+        </div>
+      </nav>
+      <BookList />
     </main>
   );
 }
