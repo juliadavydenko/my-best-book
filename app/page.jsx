@@ -14,8 +14,8 @@ export default function Home() {
       </p>
 
       <div className="flex justify-center my-8">
-        <Link href="/checkout">
-          <button className="btn-primary">View</button>
+        <Link href="/books">
+          <button className="btn-primary">View the book collection</button>
         </Link>
       </div>
 

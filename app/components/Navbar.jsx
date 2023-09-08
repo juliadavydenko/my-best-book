@@ -14,7 +14,7 @@ export default function Navbar() {
       />
       <h1>My Best Book</h1>
       <Link href="/">Dashboard</Link>
-      <Link href="/checkout">Checkout</Link>
+      <Link href="/books">Books</Link>
     </nav>
   );
 }
