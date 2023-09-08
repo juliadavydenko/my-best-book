@@ -1,13 +1,39 @@
+import { notFound } from "next/navigation";
+
 // This is the structure of NextJS and the way to create a dynamic route,
 // nesting folder inside the folder,
 // in the end we are able to go to books/id, and the way we fetch is similar as was done to fetch all books,
 // I've also output the book age group the same way as in the BookList component
+
+export const dynamicParams = true;
+// above is default value and it fetches data for that book and creates new page if that id exists
+// and generates a Static Page for future requests to that book, further response check is below
+
+export async function generateStaticParams() {
+  const res = await fetch("http://localhost:4000/books");
+
+  const books = await res.json();
+
+  return books.map((book) => ({
+    id: book.id,
+  }));
+}
+// the above function is for better performance,
+// for all pages to be pre-rendered in advance
+
 async function getBook(id) {
   const res = await fetch("http://localhost:4000/books/" + id, {
     next: {
       revalidate: 15,
     },
   });
+
+  // response check - if it's not ok, 404 should be shown
+
+  if (!res.ok) {
+    notFound();
+  }
+
   return res.json();
 }
 
