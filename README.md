@@ -13,7 +13,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Getting Started
 
 
-First, run the development server:
+First, run the development server (expected to be on http://localhost:3000/ ):
 
 ```bash
 npm run dev
@@ -22,6 +22,25 @@ yarn dev
 # or
 pnpm dev
 ```
+Secondly, run the json server (expected to be on http://localhost:4000/ ):
+```bash
+npm run dev
+# or
+yarn dev
+# or
+json-server --watch --port 4000 ./_data/db.json
+```
+If successful, you will see list of books at http://localhost:4000/books/
+
+Finally, run the json server (expected to be on http://localhost:5000/ ):
+```bash
+npm run dev
+# or
+yarn dev
+# or
+json-server --watch --port 5000 ./_data/orders.json
+```
+If successful, you will see list of orders at http://localhost:5000/orders
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
