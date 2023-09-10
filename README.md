@@ -90,7 +90,8 @@ Continue Shopping at Main Page" - where Main Page is the link to the Main Page.
 To test out my code, I used local json-server(npm i json-server) and filled my JSON files with some data, as I mentioned above. The two JSON fles are located in the \_data folder. First file(db.json) is for Available Books and (orders.json) is updated when user submits the form.
 
 ## Server.js, node, form validation, DB
-![Screen Shot 2023-09-10 at 22 38 28](https://github.com/juliadavydenko/my-best-book/assets/98152890/92c7ba46-9f43-4ab5-993d-6e5ff61b7a65)
+
+![Screen Shot 2023-09-10 at 23 29 53](https://github.com/juliadavydenko/my-best-book/assets/98152890/af3fea53-d663-46ee-906d-8baaa0ec5752)
 
 The main validation happens on the server side. 
 I used validator.js(a library of string validators and sanitizers, can be installed by “npm i validator” and then imported). Server validation logic is represented in the file "route.js" located inside the "api" folder. There I make sure that: 1. Name contain only letters. 2. Name must not contain numbers 3.Name must not contain special characters like ()[]&/\\,. 3. Name must not contain the word "and". 4. Gender must be either "male" or "female". 
