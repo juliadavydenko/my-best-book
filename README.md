@@ -13,16 +13,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Getting Started
 
 
-First, run 
-```in the terminal
+First, run in the terminal: (installs all modules that are listed on package. json file and their dependencies.)
+```
 npm install
-# The npm install installs all modules that are listed on package. json file and their dependencies.
 ```
 and:
 ```
 npm install -g json-server
-# To run to local json files for application to work.
 ```
+(to run to local json files for application to work).
 
 Start the development server (expected to be on http://localhost:3000/ ):
 
@@ -34,14 +33,17 @@ yarn dev
 pnpm dev
 ```
 Secondly, run 2 commands with the json server:
-```(expected to be on http://localhost:4000/ )
-json-server --watch --port 4000 ./_data/db.json
-# If successful, you will see list of books at http://localhost:4000/books/
-# and
-```(expected to be on http://localhost:4000/ )
-json-server --watch --port 5000 ./_data/orders.json
-# If successful, you will see list of orders at http://localhost:5000/orders
+1: (expected to be on http://localhost:4000/ )
 ```
+json-server --watch --port 4000 ./_data/db.json
+```
+If successful, you will see list of books at http://localhost:4000/books/
+2: (expected to be on http://localhost:5000/ )
+```
+json-server --watch --port 5000 ./_data/orders.json
+```
+If successful, you will see list of orders at http://localhost:5000/orders
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 # Main Information 
