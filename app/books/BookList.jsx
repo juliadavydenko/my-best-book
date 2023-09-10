@@ -15,7 +15,7 @@ async function getBooks() {
 // In the function above I've also added the second argument(object)
 // for NextJS to revalidate the data, re-fetch it, because by default
 // even if data is change Next will show cached version, it fetches 1 time only,
-// so here I put 15 seconds and after that time when I refresh the dage 2nd time it should show the updated data
+// so here I put 15 seconds and after that time when I refresh the page 2nd time it should show the updated data
 
 // For data to not be cached at all
 // f.ex. if we'd have customer's requests here and constantly changing data I would put here 0 as a value

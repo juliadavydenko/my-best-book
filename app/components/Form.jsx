@@ -10,6 +10,7 @@ export default function Form() {
   const [gender, setGender] = useState("");
   const [age, setAge] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(""); // state to store validation error message
 
   // adding functionality
 
@@ -26,20 +27,26 @@ export default function Form() {
       age,
     };
 
-    const res = await fetch("http://localhost:5000/orders", {
+    const res = await fetch("http://localhost:3000/api", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(order),
     });
     // check the status and redirect user to the next page
-    // if (res.status === 210) {
-    router.refresh();
-    router.push("/submitted");
-    // }
+    if (res.ok) {
+      router.refresh();
+      router.push("/submitted");
+    } else {
+      const errorData = await res.json();
+      setError(errorData.error); // store the validation error message
+      setIsLoading(false); // reset loading state
+    }
   };
 
   return (
     <form onSubmit={handleSubmit} className="w-1/2">
+      {/* displaying the error message */}
+      {error && <div className="text-red-500">{error}</div>}
       <label>
         <span>Name:</span>
         <input
@@ -52,8 +59,8 @@ export default function Form() {
       <label>
         <span>Gender:</span>
         <select onChange={(e) => setGender(e.target.value)} value={gender}>
-          <option value="boy">Boy</option>
-          <option value="girl">Girl</option>
+          <option value="male">male</option>
+          <option value="female">female</option>
         </select>
       </label>
       <label>

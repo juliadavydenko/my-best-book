@@ -21,14 +21,15 @@ export default function Home() {
         <p>2-FOR-1 FOR ALL BOOKS!</p>
       </div>
       <div className="card">
-        <h3>New website live!</h3>
+        <h3>Special Gift!</h3>
         <p>
           In all our personalized children's books, the children are the stars
           of their own stories. Exciting adventures unfold as the pages turn.
           Personalize the child's hair color, skin tone and a wide range of
           personal variables, so that the child feels as though the book is
           really about them. A personalized book is the perfect gift idea for
-          kids!
+          kids! And if it's your first order we will provide a special packaging
+          with a unique gift set!
         </p>
       </div>
     </main>
