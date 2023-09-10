@@ -90,3 +90,9 @@ Continue Shopping at Main Page" - where Main Page is the link to the Main Page.
 To test out my code, I used local json-server(npm i json-server) and filled my JSON files with some data, as I mentioned above. The two JSON fles are located in the \_data folder. First file(db.json) is for Available Books and (orders.json) is updated when user submits the form.
 
 ## Server.js, node, form validation, DB
+![Screen Shot 2023-09-10 at 22 38 28](https://github.com/juliadavydenko/my-best-book/assets/98152890/92c7ba46-9f43-4ab5-993d-6e5ff61b7a65)
+
+The main validation happens on the server side. 
+I used validator.js(a library of string validators and sanitizers, can be installed by “npm i validator” and then imported). Server validation logic is represented in the file "route.js" located inside the "api" folder. There I make sure that: 1. Name contain only letters. 2. Name must not contain numbers 3.Name must not contain special characters like ()[]&/\\,. 3. Name must not contain the word "and". 4. Gender must be either "male" or "female". 
+I added a state variable called error to store the validation error message. If the API call returns an error response (status code other than 200 OK), it will set the error state with the error message returned from the API, and the error message will be displayed to the user(so that the user can see why their form submission was unsuccessful). The loading state (isLoading) is reset when an error occurs to allow the user to resubmit the form. If everything is okay, they are redirected to a Success(submitted) page. On the frontend side logic is in Form.jsx file. I used Nextjs for server-side validation because it is very smoothly integrates with frontend part of my app, and I can create API routes directly within Next.js project without the need to set up a separate Express.js or Node.js server(which was my first attempt, within the server folder). 
+
