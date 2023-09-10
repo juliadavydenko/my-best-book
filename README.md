@@ -1,3 +1,4 @@
+![Screen Shot 2023-09-10 at 11 25 11](https://github.com/juliadavydenko/my-best-book/assets/98152890/55938939-30d6-499a-9f50-08ad99c050dc)
 ## General Information
 This is a [Next.js](https://nextjs.org/) project (a React framework for building full-stack web applications) also made with NodeJS and uses TailwindCSS for styling. I used React Components to build user interfaces, and Next.js for additional features and optimizations. Next.js has two different routers: the App Router and the Pages Router. In this project I used The App Router as it is a newer router that allows you to use React's latest features, such as Server Components and Streaming.  I used PlayfairDisplay Goggle font. Imported from Next/font/google it makes it easier, because no requests are sent to Google by the browser. 
 
@@ -10,6 +11,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 
 ## Getting Started
+
 
 First, run the development server:
 
