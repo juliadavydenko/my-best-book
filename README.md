@@ -2,18 +2,11 @@
 ## General Information
 This is a [Next.js](https://nextjs.org/) project (a React framework for building full-stack web applications) also made with NodeJS and uses TailwindCSS for styling. I used React Components to build user interfaces, and Next.js for additional features and optimizations. Next.js has two different routers: the App Router and the Pages Router. In this project I used The App Router as it is a newer router that allows you to use React's latest features, such as Server Components and Streaming.  I used PlayfairDisplay Goggle font. Imported from Next/font/google it makes it easier, because no requests are sent to Google by the browser. 
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-
-
 ## Getting Started
 
 
-First, run in the terminal: (installs all modules that are listed on package. json file and their dependencies.)
+First, run in the terminal: 
+(installs all modules that are listed on package. json file and their dependencies.)
 ```
 npm install
 ```
